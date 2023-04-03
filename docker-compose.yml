@@ -16,6 +16,8 @@ services:
   besu-node-2:
     container_name: besu-node-2
     image: hyperledger/besu:latest
+    depends_on:
+      - besu-node-1
     volumes:
       - ./node-2:/usr/app/
     command: --config-file=/usr/app/config.toml
@@ -29,6 +31,8 @@ services:
   besu-node-3:
     container_name: besu-node-3
     image: hyperledger/besu:latest
+    depends_on:
+      - besu-node-1
     volumes:
       - ./node-3:/usr/app/
     command: --config-file=/usr/app/config.toml
@@ -42,6 +46,8 @@ services:
   besu-node-4:
     container_name: besu-node-4
     image: hyperledger/besu:latest
+    depends_on:
+      - besu-node-1
     volumes:
       - ./node-4:/usr/app/
     command: --config-file=/usr/app/config.toml
