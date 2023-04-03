@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.5"
 services:
   reltime_node:
     image: hyperledger/besu:latest

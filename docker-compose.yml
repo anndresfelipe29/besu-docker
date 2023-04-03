@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.5"
 services:
   besu-node-1:
     container_name: besu-node-1
